@@ -24,7 +24,7 @@ Feel free to contact me, [Chaoyi Zhou](https://chaoyizh.github.io/chaoyizh-home-
 
 
 ## 📢 News
-- **2025-01-22**: Latent Radiance Fields with 3D-aware 2D Representations is accepted to ICLR 2025.
+- **2025-01-22**: Latent Radiance Fields with 3D-aware 2D Representations was accepted to ICLR 2025.
 
 
 ## 📋 TODO
