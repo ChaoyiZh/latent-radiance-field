@@ -18,7 +18,7 @@ Latent Radiance Fields with 3D-aware 2D Representations
 </h4>
 
 This repository contains the official implementation of the paper: [Latent Radiance Fields with 3D-aware 2D Representations](https://openreview.net/pdf?id=vL9t9tpKli), which is accepted to ICLR 2025.
-we propose a method to achieve 3D-aware 2D representations and enable **3D reconstruction in the latent space**. We present a three-stage pipeline, to enhance the 3D awareness of both encoder and decoder of the VAE
+we propose a method to achieve 3D-aware 2D representations and enable **3D reconstruction in the latent space**. We present a three-stage pipeline to enhance the 3D awareness of both encoder and decoder of the VAE
 
 Feel free to contact me [Chaoyi Zhou](https://chaoyizh.github.io/chaoyizh-home-page/) or open an issue if you have any questions or suggestions.
 
