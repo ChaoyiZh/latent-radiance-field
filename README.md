@@ -29,7 +29,7 @@ Feel free to contact me, [Chaoyi Zhou](https://chaoyizh.github.io/chaoyizh-home-
 
 ## 📋 TODO
 
-- [ ] Code Release.
+- [ ] Release the code.
 
 
 
