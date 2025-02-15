@@ -6,13 +6,15 @@ Latent Radiance Fields with 3D-aware 2D Representations
 
 [Chaoyi Zhou*](https://chaoyizh.github.io/chaoyizh-home-page/), [Xi Liu*](https://xiliu8006.github.io/), [Feng Luo](https://people.computing.clemson.edu/~luofeng/), [Siyu Huang](https://siyuhuang.github.io/)
 
-[![OpenReview](https://img.shields.io/badge/OpenReview-Paper-blue)](https://openreview.net/pdf?id=vL9t9tpKli)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.09613-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2502.09613)
 [![Project page](https://img.shields.io/badge/Project-Page-brightgreen)](https://latent-radiance-field.github.io/LRF/)
-
+[![Model](https://img.shields.io/badge/HF-Model-yellow)](https://huggingface.co/chaoyizh/LRF)
 
 
 <p>
+
     <img width="730", src="./assets/method.png">
+
 </p>
 
 </h4>
@@ -24,15 +26,48 @@ Feel free to contact me, [Chaoyi Zhou](https://chaoyizh.github.io/chaoyizh-home-
 
 
 ## 📢 News
-- **2025-01-22**: Latent Radiance Fields with 3D-aware 2D Representations was accepted to ICLR 2025.
+- **2025-01-22**: Latent Radiance Fields with 3D-aware 2D Representations is accepted to ICLR 2025.
+- **2025-02-14**: Training, rendering, and evalution code are released.
 
 
 ## 📋 TODO
 
-- [ ] Release the code.
+- [x] Release the code for Latent Radiance Fields.
+- [ ] Release the code for 3D-aware fine-tuning.
 
 
 
+## 🔧 Installation
+
+```bash
+git clone https://github.com/ChaoyiZh/latent-radiance-field.git
+cd latent-radiance-field
+conda create --name lrf python=3.8
+conda activate lrf
+```
+PyTorch (Please check your CUDA version, we used 11.8)
+```bash
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu118
+```
+Required packages
+```bash
+pip install -r requirements.txt
+```
+
+## 🦾 LRF training, rendering, and evaluation
+### Training
+```bash
+cd gaussian-splatting
+python train.py -s data/DATASET_NAME -m output/OUTPUT_NAME -i images_8 --ae_model VAE --ckpt_path path/to/ckpt --cfg_path config/config.yaml --eval --convert_SHs_python
+```
+### Rendering
+```bash
+python render.py -s data/DATASET_NAME -m output/OUTPUT_NAME --convert_SHs_python --full_render
+```
+### Evluataion
+```bash
+python metrics.py -s data/DATASET_NAME -m output/OUTPUT_NAME
+```
 ## 📚 Citation
 If you find our work helpful, please consider citing:
 ```bibtex

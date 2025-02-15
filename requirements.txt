@@ -1,0 +1,11 @@
+pytorch-lightning==2.4.0
+einops==0.3.0
+omegaconf==2.1.1
+requests
+plyfile
+tqdm
+-e gaussian-splatting/submodules/diff-gaussian-rasterization
+-e gaussian-splatting/submodules/simple-knn
+-e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
+-e git+https://github.com/CompVis/latent-diffusion.git#egg=latent_diffusion
+
