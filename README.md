@@ -11,13 +11,12 @@ Latent Radiance Fields with 3D-aware 2D Representations
 [![Model](https://img.shields.io/badge/HF-Model-yellow)](https://huggingface.co/chaoyizh/LRF)
 
 
-<p>
 
-    <img width="730", src="./assets/method.png">
-
-</p>
 
 </h4>
+<p>
+    <img width="730" src="./assets/method.png">
+</p>
 
 This repository contains the official implementation of the paper: [Latent Radiance Fields with 3D-aware 2D Representations](https://openreview.net/pdf?id=vL9t9tpKli), which was accepted to ICLR 2025.
 we propose a method to achieve 3D-aware 2D representations and enable **3D reconstruction in the latent space**. We present a three-stage pipeline to enhance the 3D awareness of both encoder and decoder of the VAE
@@ -78,3 +77,5 @@ If you find our work helpful, please consider citing:
   year={2025}
 }
 ```
+
+
