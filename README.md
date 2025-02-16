@@ -75,6 +75,7 @@ We follow the same dataset logistics for [3D Gaussian Splatting](https://github.
         |---images.bin
         |---points3D.bin
 ```
+For the dataset we used in our paper. Please refer to [MipNeRF 360](https://jonbarron.info/mipnerf360/),[DL3DV-10K](https://dl3dv-10k.github.io/DL3DV-10K/), [NeRF-LLFF](https://www.kaggle.com/datasets/arenagrenade/llff-dataset-full/data), and [MVImgNet](https://github.com/GAP-LAB-CUHK-SZ/MVImgNet).
 
 ### Training
 ```bash
