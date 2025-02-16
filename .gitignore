@@ -3,3 +3,5 @@ src/
 latent-diffusion/
 gaussian-splatting/taming
 test/
+gaussian-splatting/submodules/diff-gaussian-rasterization/build
+gaussian-splatting/submodules/simple-knn/build

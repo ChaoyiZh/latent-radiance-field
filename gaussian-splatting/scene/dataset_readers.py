@@ -132,7 +132,7 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, auto_encode
             focal_length_x = intr.params[0]
             FovY = focal2fov(focal_length_x, height)
             FovX = focal2fov(focal_length_x, width)
-        elif intr.model=="PINHOLE" or intr.model=="OPENCV":
+        elif intr.model=="PINHOLE":
             focal_length_x = intr.params[0]
             focal_length_y = intr.params[1]
             FovY = focal2fov(focal_length_y, height)
@@ -145,16 +145,7 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, auto_encode
         else:
             image_path = os.path.join(images_folder, os.path.basename(extr.name))
         image_name = os.path.basename(image_path).split(".")[0]
-        try:
-            image = Image.open(image_path)
-        except:
-            # 如果失败，尝试将后缀改为png
-            image_path_png = os.path.splitext(image_path)[0] + ".png"
-            try:
-                image = Image.open(image_path_png)
-            except:
-                # 如果仍然失败，则跳过该文件
-                continue
+        image = Image.open(image_path)
         if auto_encoder:
 
             assert round(height/image.height) ==round(width/image.width)
@@ -166,11 +157,11 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, auto_encode
             height = crop_height*scale
             width = crop_width*scale
 
-            if intr.model == "SIMPLE_PINHOLE":
+            if intr.model == "SIMPLE_PINHOLE" or intr.model=="SIMPLE_RADIAL":
                 focal_length_x = intr.params[0]
                 FovY = focal2fov(focal_length_x, height)
                 FovX = focal2fov(focal_length_x, width)
-            elif intr.model == "PINHOLE" or intr.model == "OPENCV":
+            elif intr.model == "PINHOLE":
                 focal_length_x = intr.params[0]
                 focal_length_y = intr.params[1]
                 FovY = focal2fov(focal_length_y, height)
@@ -184,7 +175,6 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, auto_encode
 
             cam_info = CameraInfo(uid=uid, R=R, T=T, FovY=FovY, FovX=FovX, image=image,
                                   image_path=image_path, image_name=image_name, width=width, height=height, latent=latent)
-            a = 1
         else:
             cam_info = CameraInfo(uid=uid, R=R, T=T, FovY=FovY, FovX=FovX, image=image,
                                   image_path=image_path, image_name=image_name, width=width, height=height)

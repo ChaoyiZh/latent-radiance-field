@@ -18,7 +18,7 @@ Latent Radiance Fields with 3D-aware 2D Representations
     <img width="730" src="./assets/method.png">
 </p>
 
-This repository contains the official implementation of the paper: [Latent Radiance Fields with 3D-aware 2D Representations](https://openreview.net/pdf?id=vL9t9tpKli), which was accepted to ICLR 2025.
+This repository contains the official implementation of the paper: [Latent Radiance Fields with 3D-aware 2D Representations](https://arxiv.org/abs/2502.09613), which was accepted to ICLR 2025.
 we propose a method to achieve 3D-aware 2D representations and enable **3D reconstruction in the latent space**. We present a three-stage pipeline to enhance the 3D awareness of both encoder and decoder of the VAE
 
 Feel free to contact me, [Chaoyi Zhou](https://chaoyizh.github.io/chaoyizh-home-page/) or open an issue if you have any questions or suggestions.
@@ -55,6 +55,27 @@ pip install -r requirements.txt
 ```
 
 ## 🦾 LRF training, rendering, and evaluation
+### Dataset
+We follow the same dataset logistics for [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting). COLMAP loaders expect the following dataset structure in the source path location:
+```bash
+<location>
+|---images
+|   |---<image 0>
+|   |---<image 1>
+|   |---...
+|---images_2
+|   |---...
+|---images_4
+|   |---...
+|---images_8
+|   |---...
+|---sparse
+    |---0
+        |---cameras.bin
+        |---images.bin
+        |---points3D.bin
+```
+
 ### Training
 ```bash
 cd gaussian-splatting
