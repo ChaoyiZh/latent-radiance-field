@@ -2,7 +2,7 @@
 
 <h4 align="center">
 
-[Latent Radiance Fields with 3D-aware 2D Representations](https://arxiv.org/abs/2502.09613)
+**[Latent Radiance Fields with 3D-aware 2D Representations](https://arxiv.org/abs/2502.09613)**
 
 [Chaoyi Zhou*](https://chaoyizh.github.io/chaoyizh-home-page/), [Xi Liu*](https://xiliu8006.github.io/), [Feng Luo](https://people.computing.clemson.edu/~luofeng/), [Siyu Huang](https://siyuhuang.github.io/)
 
