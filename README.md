@@ -18,7 +18,7 @@
     <img width="730" src="./assets/method.png">
 </p>
 
-**We propose a 3D-aware 2D VAE that enables 3D reconstruction in the 2D latent space**. We present a three-stage pipeline to enhance the 3D awareness of both encoder and decoder of the VAE
+**We propose a 3D-aware 2D VAE that enables 3D reconstruction in the 2D latent space**. We present a three-stage pipeline to enhance the 3D awareness of both encoder and decoder of the VAE.
 
 Feel free to contact me, [Chaoyi Zhou](https://chaoyizh.github.io/chaoyizh-home-page/) or open an issue if you have any questions or suggestions.
 
