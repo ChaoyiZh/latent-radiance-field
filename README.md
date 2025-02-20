@@ -2,7 +2,7 @@
 
 <h4 align="center">
 
-Latent Radiance Fields with 3D-aware 2D Representations
+[Latent Radiance Fields with 3D-aware 2D Representations](https://arxiv.org/abs/2502.09613)
 
 [Chaoyi Zhou*](https://chaoyizh.github.io/chaoyizh-home-page/), [Xi Liu*](https://xiliu8006.github.io/), [Feng Luo](https://people.computing.clemson.edu/~luofeng/), [Siyu Huang](https://siyuhuang.github.io/)
 
@@ -18,7 +18,6 @@ Latent Radiance Fields with 3D-aware 2D Representations
     <img width="730" src="./assets/method.png">
 </p>
 
-This repository contains the official implementation of the paper: [Latent Radiance Fields with 3D-aware 2D Representations](https://arxiv.org/abs/2502.09613) (ICLR 2025).
 **We propose a 3D-aware 2D VAE that enables 3D reconstruction in the 2D latent space**. We present a three-stage pipeline to enhance the 3D awareness of both encoder and decoder of the VAE
 
 Feel free to contact me, [Chaoyi Zhou](https://chaoyizh.github.io/chaoyizh-home-page/) or open an issue if you have any questions or suggestions.
